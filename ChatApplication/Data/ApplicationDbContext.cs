@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using ChatApplication.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ChatApplication.Data
@@ -9,5 +10,6 @@ namespace ChatApplication.Data
             : base(options)
         {
         }
+        public DbSet<Message> Messages { get; set; }
     }
 }

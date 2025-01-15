@@ -11,9 +11,9 @@ namespace ChatApplication.Models
         public string SenderId { get; set; }
         public string ReceiverId { get; set; }
 
-    //    [ForeignKey(nameof(SenderId))]
-    //    public AppUser Sender { get; set; }
-    //    [ForeignKey(nameof(ReceiverId))]
-    //    public AppUser Receicver { get; set; }
+        [ForeignKey(nameof(SenderId))]
+        public AppUser Sender { get; set; }
+        [ForeignKey(nameof(ReceiverId))]
+        public AppUser Receicver { get; set; }
     }
 }
